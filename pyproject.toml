@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-wire-doctor"
+version = "1.0.0"
+authors = [
+  { name = "Prognosticate X" },
+]
+description = "Zero-dependency wire-level conformance, compatibility, and security auditor for Model Context Protocol (MCP) servers and clients."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.scripts]
+mcp-wire-doctor = "mcp_wire_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_wire_doctor*"]
